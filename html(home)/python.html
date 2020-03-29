@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+div {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+}
+
+.red {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+
+.green {
+    background-color: #ddffdd;
+    border-left: 6px solid #4CAF50;
+}
+
+.blue {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+
+
+.yellow {
+    background-color: #ffffcc;
+    border-left: 6px solid #ffeb3b;
+}
+body {font-family: Arial;
+        background-image: url("ppp.jpg");
+    }
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab{
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+</style>
+</head>
+<body>
+        <h2>Placement Portal</h2>
+
+        <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Company</button>
+        <button class="tablinks" onclick="openCity(event, 'criteria')">Criteria</button>
+          <button class="tablinks" onclick="openCity(event, 'London')">Languages</button>
+          <button class="tablinks" onclick="openCity(event, 'inter')">Interview</button>
+          <button class="tablinks" onclick="openCity(event, 'subject')">Subject</button>
+            <button class="tablinks" onclick="openCity(event, 'top')">Top Topic</button>
+           <button class="tablinks" onclick="openCity(event, 'apt')">Aptitude</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Puzzle</button>
+           <button class="tablinks" onclick="openCity(event, 'abt')">About Us</button>
+        </div>
+
+<h2>Python</h2>
+<div class="red">
+  <pre><strong>Python Language Introduction</strong> 
+Python is a widely used general-purpose, high level programming language. It was initially designed by Guido van Rossum in 1991 and developed by Python Software Foundation. It was mainly developed for emphasis on code readability, and its syntax allows programmers to express concepts in fewer lines of code.
+
+Python is a programming language that lets you work quickly and integrate systems more efficiently.
+
+There are two major Python versions- Python 2 and Python 3. Both are quite different.
+
+Beginning with Python programming:
+
+1) Finding an Interpreter:
+
+
+Before we start Python programming, we need to have an interpreter to interpret and run our programs. There are certain online interpreters like https://ide.geeksforgeeks.org/, http://ideone.com/ or http://codepad.org/  that can be used to start Python without installing an interpreter.
+
+Windows:There are many interpreters available freely to run Python scripts like IDLE ( Integrated Development Environment ) which is installed when you install the python software from http://python.org/
+
+Linux:For Linux, Python comes bundled with the linux.
+
+2) Writing first program:
+
+Following is first program in Python
+# Script Begins
+ 
+print("GeeksQuiz")
+ 
+# Scripts Ends
+
+Output:
+
+GeeksQuiz</pre>
+</div>
+
+<div class="green">
+  <pre><strong>Strings, Lists, Tuples, Iterations</strong> 
+Strings in Python
+A string is a sequence of characters. It can be declared in python by using double quotes. Strings are immutable, i.e., they cannot be changed.
+# Assigning string to a variable
+a = "This is a string"
+print a
+
+Lists in Python
+Lists are one of the most powerful tools in python. They are just like the arrays declared in other languages. But the most powerful thing is that list need not be always homogenous. A single list can contain strings, integers, as well as objects. Lists can also be used for implementing stacks and queues. Lists are mutable, i.e., they can be altered once declared.
+# Declaring a list
+L = [1, "a" , "string" , 1+2]
+print L
+L.append(6)
+print L
+L.pop()
+print L
+print L[1]
+
+The output is :
+
+[1, 'a', 'string', 3]
+[1, 'a', 'string', 3, 6]
+[1, 'a', 'string', 3]
+a
+
+Tuples in Python
+A tuple is a sequence of immutable Python objects. Tuples are just like lists with the exception that tuples cannot be changed once declared. Tuples are usually faster than lists.
+
+
+tup = (1, "a", "string", 1+2)
+print tup
+print tup[1]
+
+The output is :
+
+(1, 'a', 'string', 3)
+a
+
+Iterations in Python
+Iterations or looping can be performed in python by ‘for’ and ‘while’ loops. Apart from iterating upon a particular condition, we can also iterate on strings, lists, and tuples.
+
+Example1: Iteration by while loop for a condition
+i = 1
+while (i < 10):
+    i += 1
+    print i,
+
+The output is :
+
+2 3 4 5 6 7 8 9 10
+
+Example 2: Iteration by for loop on string
+s = "Hello World"
+for i in s :
+    print i
+
+The output is :
+
+H
+e
+l
+l
+o
+ 
+W
+o
+r
+l
+d
+
+Example 3: Iteration by for loop on list
+L = [1, 4, 5, 7, 8, 9]
+for  i in L:
+    print i,
+
+The output is :
+
+1 4 5 7 8 9
+
+Example 4 : Iteration by for loop for range
+for  i in range(0, 10):
+    print i,
+
+The output is :
+
+0 1 2 3 4 5 6 7 8 9
+</pre>
+</div>
+
+<div class="blue">
+  <pre><strong>Variables, Expressions, Conditions and Functions</strong> 
+Running your First Code in Python
+Python programs are not compiled, rather they are interpreted. Now, let us move to writing a python code and running it. Please make sure that python is installed on the system you are working. If it is not installed, download it from here. We will be using python 2.7.
+
+Making a Python file:
+Python files are stored with the extension “.py”. Open text editor and save a file with the name “hello.py”. Open it and write the following code:
+print "Hello World"
+# Notice that NO semi-colon is to be used
+
+Reading the file contents:
+Linux System – Move to the directory from terminal where the created file (hello.py) is stored by using the ‘cd’ command, and then type the following in the terminal :
+
+python hello.py
+
+Windows system – Open command prompt and move to the directory where the file is stored by using the ‘cd’ command and then run the file by writing the file name as command.
+
+
+Variables in Python
+Variables need not be declared first in python. They can be used directly. Variables in python are case sensitive as most of the other programming languages.
+Example:
+a = 3
+A = 4
+print a
+print A
+
+The output is :
+
+3
+4
+
+Expressions in Python
+Arithmetic operations in python can be performed by using arithmetic operators and some of the in-built functions.
+a = 2
+b = 3
+c = a + b
+print c
+d = a * b
+print d
+
+The output is :
+
+5
+6
+
+Conditions in Python
+Conditional output in python can be obtained by using if-else and elif (else if) statements.
+a = 3
+b = 9
+if b % a == 0 :
+    print "b is divisible by a"
+elif b + 1 == 10:
+    print "Increment in b produces 10"
+else:
+    print "You are in else statement"
+
+The output is :
+
+b is divisible by a
+
+Functions in Python
+A function in python is declared by the keyword ‘def’ before the name of the function. The return type of the function need not be specified explicitly in python. The function can be invoked by writing the function name followed by the parameter list in the brackets.
+# Function for checking the divisibility
+# Notice the indentation after function declaration
+# and if and else statements
+def checkDivisibility(a, b):
+    if a % b == 0 :
+        print "a is divisible by b"
+    else:
+        print "a is not divisible by b"
+#Driver program to test the above function
+checkDivisibility(4, 2)
+
+The output is :
+
+a is divisible by bs</pre>
+</div>
+
+<div class="yellow">
+  <pre><strong>Loops and Control Statements </strong> 
+Python programming language provides following types of loops to handle looping requirements.
+
+While Loop
+
+Syntax :
+
+while expression:
+    statement(s)
+
+In Python, all the statements indented by the same number of character spaces after a programming construct are considered to be part of a single block of code. Python uses indentation as its method of grouping statements.
+# prints Hello Geek 3 Times
+count = 0
+while (count < 3):    
+    count = count+1
+    print("Hello Geek")
+
+Output:
+
+Hello Geek
+Hello Geek
+Hello Geek
+
+See this for an example where while loop is used for iterators. As mentioned in the article, it is not recommended to use while loop for iterators in python.
+
+
+ 
+
+For in Loop
+
+In Python, there is no C style for loop, i.e., for (i=0; i<n; i++). There is “for in” loop which is similar to for each loop in other languages.
+
+Syntax:
+
+for iterator_var in sequence:
+    statements(s)
+
+It can be used to iterate over iterators and a range.
+# Iterating over a list
+print("List Iteration")
+l = ["geeks", "for", "geeks"]
+for i in l:
+    print(i)
+      
+# Iterating over a tuple (immutable)
+print("\nTuple Iteration")
+t = ("geeks", "for", "geeks")
+for i in t:
+    print(i)
+      
+# Iterating over a String
+print("\nString Iteration")    
+s = "Geeks"
+for i in s :
+    print(i)
+      
+# Iterating over dictionary
+print("\nDictionary Iteration")   
+d = dict() 
+d['xyz'] = 123
+d['abc'] = 345
+for i in d :
+    print("%s  %d" %(i, d[i]))
+
+Output:
+
+List Iteration
+geeks
+for
+geeks
+
+Tuple Iteration
+geeks
+for
+geeks
+
+String Iteration
+G
+e
+e
+k
+s
+
+Dictionary Iteration
+xyz  123
+abc  345
+
+We can use for in loop for user defined iterators. See this for example.
+
+ 
+
+Nested Loops
+
+Python programming language allows to use one loop inside another loop. Following section shows few examples to illustrate the concept.
+Syntax:
+
+for iterator_var in sequence:
+    for iterator_var in sequence:
+        statements(s)
+        statements(s)
+
+The syntax for a nested while loop statement in Python programming language is as follows:
+
+while expression:
+    while expression: 
+        statement(s)
+        statement(s)
+
+A final note on loop nesting is that we can put any type of loop inside of any other type of loop. For example a for loop can be inside a while loop or vice versa.
+from __future__ import print_function
+for i in range(1, 5):
+    for j in range(i):
+         print(i, end=' ')
+    print()
+
+Output:
+
+1
+2 2
+3 3 3
+4 4 4 4
+
+Loop Control Statements
+
+Loop control statements change execution from its normal sequence. When execution leaves a scope, all automatic objects that were created in that scope are destroyed. Python supports the following control statements.
+
+Continue Statement
+It returns the control to the beginning of the loop.
+# Prints all letters except 'e' and 's'
+for letter in 'geeksforgeeks': 
+    if letter == 'e' or letter == 's':
+         continue
+    print 'Current Letter :', letter
+    var = 10
+
+Output:
+
+Current Letter : g
+Current Letter : k
+Current Letter : f
+Current Letter : o
+Current Letter : r
+Current Letter : g
+Current Letter : k
+
+Break Statement
+It brings control out of the loop
+for letter in 'geeksforgeeks': 
+ 
+    # break the loop as soon it sees 'e' 
+    # or 's'
+    if letter == 'e' or letter == 's':
+         break
+ 
+print 'Current Letter :', letter
+
+Output:
+
+Current Letter : e
+
+Pass Statement
+We use pass statement to write empty loops. Pass is also used for empty control statement, function and classes.
+# An empty loop
+for letter in 'geeksforgeeks':
+    pass
+print 'Last Letter :', letter
+Output:
+
+Last Letter : s</pre>
+</div>
+
+
+
+</body>
+</html>
+

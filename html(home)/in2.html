@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {font-family: Arial;
+        background-image: url("ppp.jpg");
+    }
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab{
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+div {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+}
+
+
+.green {
+    background-color: #ddffdd;
+    border-left: 6px solid #4CAF50;
+}
+
+</style>
+</head>
+<body>
+        <h2>Placement Portal</h2>
+
+        <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Company</button>
+        <button class="tablinks" onclick="openCity(event, 'criteria')">Criteria</button>
+          <button class="tablinks" onclick="openCity(event, 'London')">Languages</button>
+          <button class="tablinks" onclick="openCity(event, 'inter')">Interview</button>
+          <button class="tablinks" onclick="openCity(event, 'subject')">Subject</button>
+            <button class="tablinks" onclick="openCity(event, 'top')">Top Topic</button>
+           <button class="tablinks" onclick="openCity(event, 'apt')">Aptitude</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Puzzle</button>
+           <button class="tablinks" onclick="openCity(event, 'abt')">About Us</button>
+        </div>
+
+
+<h2>Commonly Asked C Programming Interview Questions </h2>
+
+<div class="green">
+  <pre><strong></strong> What is the difference between declaration and definition of a variable/function
+    Ans: Declaration of a variable/function simply declares that the variable/function exists somewhere in the program but the memory is not allocated for them. But the declaration of a variable/function serves an important role. And that is the type of the variable/function. Therefore, when a variable is declared, the program knows the data type of that variable. In case of function declaration, the program knows what are the arguments to that functions, their data types, the order of arguments and the return type of the function. So that’s all about declaration. Coming to the definition, when we define a variable/function, apart from the role of declaration, it also allocates memory for that variable/function. Therefore, we can think of definition as a super set of declaration. (or declaration as a subset of definition). From this explanation, it should be obvious that a variable/function can be declared any number of times but it can be defined only once. (Remember the basic principle that you can’t have two locations of the same variable/function).
+    
+       // This is only declaration. y is not allocated memory by this statement 
+      extern int y; 
+    
+      // This is both declaration and definition, memory to x is allocated by this statement.
+      int x;
+    What are different storage class specifiers in C?
+    Ans: auto, register, static, extern
+    
+    What is scope of a variable? How are variables scoped in C?
+    Ans: Scope of a variable is the part of the program where the variable may directly be accessible. In C, all identifiers are lexically (or statically) scoped. See this for more details.
+    
+    How will you print “Hello World” without semicolon?
+    Ans:
+    
+    int main(void)
+    {
+        if (printf("Hello World")) ;
+    }
+    Run on IDE
+    See print “Geeks for Geeks” without using a semicolon for answer.
+    
+    
+    
+     
+    
+    When should we use pointers in a C program?
+    1. To get address of a variable
+    2. For achieving pass by reference in C: Pointers allow different functions to share and modify their local variables.
+    3. To pass large structures so that complete copy of the structure can be avoided.
+    C
+    4. To implement “linked” data structures like linked lists and binary trees.
+    
+    What is NULL pointer? 
+    Ans: NULL is used to indicate that the pointer doesn’t point to a valid location. Ideally, we should initialize pointers as NULL if we don’t know their value at the time of declaration. Also, we should make a pointer NULL when memory pointed by it is deallocated in the middle of a program.
+    
+    What is Dangling pointer?
+    Ans: Dangling Pointer is a pointer that doesn’t point to a valid memory location. Dangling pointers arise when an object is deleted or deallocated, without modifying the value of the pointer, so that the pointer still points to the memory location of the deallocated memory. Following are examples.
+    
+    // EXAMPLE 1
+    int *ptr = (int *)malloc(sizeof(int));
+    .............
+    .............
+    free(ptr); 
+     
+    // ptr is a dangling pointer now and operations like following are invalid
+    *ptr = 10;  // or printf("%d", *ptr);
+    Run on IDE
+    // EXAMPLE 2
+    int *ptr = NULL
+    {
+       int x  = 10;
+       ptr = &x;
+    }
+    // x goes out of scope and memory allocated to x is free now.
+    // So ptr is a dangling pointer now.
+    Run on IDE
+    What is memory leak? Why it should be avoided
+    Ans: Memory leak occurs when programmers create a memory in heap and forget to delete it. Memory leaks are particularly serious issues for programs like daemons and servers which by definition never terminate.
+    
+    /* Function with memory leak */
+    #include <stdlib.h>
+     
+    void f()
+    {
+       int *ptr = (int *) malloc(sizeof(int));
+     
+       /* Do some work */
+     
+       return; /* Return without freeing ptr*/
+    }
+    Run on IDE
+    What are local static variables? What is their use?
+    Ans:A local static variable is a variable whose lifetime doesn’t end with a function call where it is declared. It extends for the lifetime of complete program. All calls to the function share the same copy of local static variables. Static variables can be used to count the number of times a function is called. Also, static variables get the default value as 0. For example, the following program prints “0 1”
+    
+    #include <stdio.h>
+    void fun()
+    {
+        // static variables get the default value as 0.
+        static int x;
+        printf("%d ", x);
+        x = x + 1;
+    }
+     
+    int main()
+    {
+        fun();
+        fun();
+        return 0;
+    }
+    // Output: 0 1</pre>
+</div>
+
+
+
+
+</body>
+</html>
+

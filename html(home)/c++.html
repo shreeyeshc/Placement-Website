@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {font-family: Arial;
+        background-image: url("ppp.jpg");
+    }
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab{
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+div {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+}
+
+.red {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+
+.green {
+    background-color: #ddffdd;
+    border-left: 6px solid #4CAF50;
+}
+
+.blue {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+
+
+.yellow {
+    background-color: #ffffcc;
+    border-left: 6px solid #ffeb3b;
+}
+</style>
+</head>
+<body>
+        <h2>Placement Portal</h2>
+
+        <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Company</button>
+        <button class="tablinks" onclick="openCity(event, 'criteria')">Criteria</button>
+          <button class="tablinks" onclick="openCity(event, 'London')">Languages</button>
+          <button class="tablinks" onclick="openCity(event, 'inter')">Interview</button>
+          <button class="tablinks" onclick="openCity(event, 'subject')">Subject</button>
+            <button class="tablinks" onclick="openCity(event, 'top')">Top Topic</button>
+           <button class="tablinks" onclick="openCity(event, 'apt')">Aptitude</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Puzzle</button>
+           <button class="tablinks" onclick="openCity(event, 'abt')">About Us</button>
+        </div>
+
+
+<h2>C++ Programming Language</h2>
+<div class="red">
+  <pre><strong>Basic Concepts of Object Oriented Programming using C++</strong> 
+    Object oriented programming – As the name suggests uses objects in programming. Object oriented programming aims to implement real world entities like 
+    inheritance, hiding, polymorphism etc in programming. The main aim of OOP is to bind together the data and the functions that operates on them so that 
+    no other part of code can access this data except that function.
+    Let us learn about different characteristics of an Object Oriented Programming language:
+    Object: Objects are basic run-time entities in an object oriented system, objects are instances of a class these are defined user defined data types.
+    ex:
+    
+    class person
+    {
+        char name[20];
+        int id;
+    public:
+        void getdetails(){}
+    };
+     
+    int main()
+    {
+       person p1; //p1 is a object 
+    }
+    Run on IDE
+    Object take up space in memory and have an associated address like a record in pascal or structure or union in C.
+    
+    When a program is executed the objects interact by sending messages to one another.
+    
+    Each object contains data and code to manipulate the data. Objects can interact without having to know details of each others data or code, it is 
+    sufficient to know the type of message accepted and type of response returned by the objects.
+    
+    
+    
+    Class: Class is a blueprint of data and functions or methods. Class does not take any space.
+    
+    
+    
+     
+    
+    Syntax for class:
+    
+    class class_name
+    {
+      private:
+         //data members and member functions declarations
+      public:
+         //data members and member functions declarations
+      protected:
+         //data members and member functions declarations
+    };
+    Run on IDE
+    Class is a user defined data type like structures and unions in C.
+    
+    By default class variables are private but in case of structure it is public. in above example person is a class.
+    
+    
+    
+    Encapsulation and Data abstraction: Wrapping up(combing) of data and functions into a single unit is known as encapsulation. The data is not 
+    accessible to the outside world and only those functions which are wrapping in the class can access it. This insulation of the data from 
+    direct access by the program is called data hiding or information hiding.
+    
+    Data abstraction refers to, providing only needed information to the outside world and hiding implementation details. For example, consider 
+    a class Complex with public functions as getReal() and getImag(). We may implement the class as an array of size 2 or as two variables. 
+    The advantage of abstractions is, we can change implementation at any point, users of Complex class wont’t be affected as out method interface 
+    remains same. Had our implementation be public, we would not have been able to change it.
+    
+    
+    
+    Inheritance: inheritance is the process by which objects of one class acquire the properties of objects of another class. It supports the 
+    concept of hierarchical classification. Inheritance provides re usability. This means that we can add additional features to an existing class 
+    without modifying it.
+    
+    
+    
+    Polymorphism: polymorphism means ability to take more than one form. An operation may exhibit different behaviors in different instances. 
+    The behavior depends upon the types of data used in the operation.
+    C++ supports operator overloading and function overloading.
+    Operator overloading is the process of making an operator to exhibit different behaviors in different instances is known as operator overloading.
+    Function overloading is using a single function name to perform different types of tasks.
+    Polymorphism is extensively used in implementing inheritance.
+    
+    
+    
+    Dynamic Binding: In dynamic binding, the code to be executed in response to function call is decided at runtime. C++ has virtual functions to support this.
+    
+    
+    
+    Message Passing: Objects communicate with one another by sending and receiving information to each other. A message for an object is a request 
+    for execution of a procedure and therefore will invoke a function in the receiving object that generates the desired results. Message passing involves 
+    specifying the name of the object, the name of the function and the information to be sent.</pre>
+</div>
+
+<div class="green">
+  <pre><strong>C++ string class and its applications</strong> 
+    In C++ we can store string by one of the two ways –
+
+    C style strings
+    string class (discussed in this post)
+    In this post, second method is discussed. string class is part of C++ library that supports a lot much functionality over C style strings.
+    C++ string class internally uses char array to store character but all memory management, allocation and null termination is handled by string class itself 
+    that is why it is easy to use. The length of c++ string can be changed at runtime because of dynamic allocation of memory similar to vectors. As string class 
+    is a container class, we can iterate over all its characters using an iterator similar to other containers like vector, set and maps, but generally we use a 
+    simple for loop for iterating over the characters and index them using [] operator.
+    C++ string class has a lot of functions to handle string easily. Most useful of them are demonstrated in below code.</pre>
+</div>
+
+<div class="blue">
+  <pre><strong>Functions in C/C++</strong> 
+    A function is a set of statements that take inputs, do some specific computation and produces output.
+
+    The idea is to put some commonly or repeatedly done task together and make a function, so that instead of writing the same code again and again for different 
+    inputs, we can call the function.
+    
+     
+    Example: 
+    Below is a simple C program to demonstrate functions in C.
+    
+    #include <stdio.h>
+     
+    // An example function that takes two parameters 'x' and 'y'
+    // as input and returns max of two input numbers
+    int max(int x, int y)
+    {
+        if (x > y)
+          return x;
+        else
+          return y;
+    }
+     
+    // main function that doesn't receive any parameter and
+    // returns integer.
+    int main(void)
+    {
+        int a = 10, b = 20;
+     
+        // Calling above function to find max of 'a' and 'b'
+        int m = max(a, b);
+     
+        printf("m is %d", m);
+        return 0;
+    }
+    Run on IDE
+    Output:
+    
+    m is 20</pre>
+</div>
+
+<div class="yellow">
+  <pre><strong>Loops in C++</strong> 
+    Loops in programming comes into use when we need to repeatedly execute a block of statements. For example: Suppose we want to print “Hello World” 10 times. 
+    This can be done in two ways as shown below:
+
+    Iterative Method
+    
+    Iterative method to do this is to write the printf() statement 10 times.
+    
+    // C++ program to illustrate need of loops
+    #include <iostream>
+    using namespace std;
+     
+    int main()
+    {
+        cout << "Hello World\n";
+        cout << "Hello World\n";
+        cout << "Hello World\n";
+        cout << "Hello World\n";
+        cout << "Hello World\n";
+        cout << "Hello World\n";
+        cout << "Hello World\n";
+        cout << "Hello World\n";
+        cout << "Hello World\n";
+        cout << "Hello World\n";
+        return 0;
+    }
+    Run on IDE
+    Using Loops
+    
+    In Loop, the statement needs to be written only once and the loop will be executed 10 times as shown below.
+    In computer programming, a loop is a sequence of instructions that is repeated until a certain condition is reached.
+    
+    
+    
+     
+    
+    An operation is done, such as getting an item of data and changing it, and then some condition is checked such as whether a counter has reached a prescribed 
+    number.
+    Counter not Reached: If the counter has not reached the desired number, the next instruction in the sequence returns to the first instruction in the sequence 
+    and repeat it.
+    Counter reached: If the condition has been reached, the next instruction “falls through” to the next sequential instruction or branches outside the loop.
+    There are mainly two types of loops:
+    
+    Entry Controlled loops: In this type of loops the test condition is tested before entering the loop body. For Loop and While Loop are entry controlled loops.
+    Exit Controlled Loops: In this type of loops the test condition is tested or evaluated at the end of loop body. Therefore, the loop body will execute atleast 
+    once, irrespective of whether the test condition is true or false. do – while loop is exit controlled loop.
+    for Loop
+    
+    A for loop is a repetition control structure which allows us to write a loop that is executed a specific number of times. The loop enables us to perform n 
+    number of steps together in one line.
+    Syntax:
+    
+    for (initialization expr; test expr; update expr)
+    {    
+         // body of the loop
+         // statements we want to execute
+    }
+    In for loop, a loop variable is used to control the loop. First initialize this loop variable to some value, then check whether this variable is less than 
+    or greater than counter value. If  statement is true, then loop body is executed and loop variable gets updated . Steps are repeated till  exit condition comes.
+    
+    Initialization Expression: In this expression we have to initialize the loop counter to some value. for example: int i=1;
+    Test Expression: In this expression we have to test the condition. If the condition evaluates to true then we will execute the body of loop and go to update 
+    expression otherwise we will exit from the for loop. For example: i <= 10;
+    Update Expression: After executing loop body this expression increments/decrements the loop variable by some value. for example: i++;
+    // C++ program to illustrate for loop
+    #include <iostream>
+    using namespace std;
+     
+    int main()
+    {
+        for (int i = 1; i <= 10; i++)
+        {
+            cout << "Hello World\n";
+        }
+     
+        return 0;
+    }
+    While Loop
+
+    While studying for loop we have seen that the number of iterations is known beforehand, i.e. the number of times the loop body is needed to be executed is known 
+    to us.  while loops are used in situations where we do not know the exact number of iterations of loop beforehand. The loop execution is terminated on the basis 
+    of test condition.
+    
+    Syntax:
+    We have already stated that a loop is mainly consisted of three statements – initialization expression, test expression, update expression. The syntax of the t
+    hree loops – For, while and do while mainly differs on the placement of these three statements.
+    
+    initialization expression;
+    while (test_expression)
+    {
+       // statements
+     
+      update_expression;
+    }
+    // C++ program to illustrate for loop
+    #include <iostream>
+    using namespace std;
+     
+    int main()
+    {
+        // initialization expression
+        int i = 1;
+     
+        // test expression
+        while (i < 6)
+        {
+            cout << "Hello World\n";
+     
+            // update expression
+            i++;
+        }
+     
+        return 0;
+    }
+    Run on IDE
+    Output:
+    
+    Hello World
+    Hello World
+    Hello World
+    Hello World
+    Hello World
+    do while loop
+    
+    In do while loops also the loop execution is terminated on the basis of test condition. The main difference between do while loop and while loop is in do while 
+    loop the condition is tested at the end of loop body, i.e do while loop is exit controlled whereas the other two loops are entry controlled loops.
+    Note: In do while loop the loop body will execute at least once irrespective of test condition.
+    
+    Syntax:
+    
+    initialization expression;
+    do
+    {
+       // statements
+    
+       update_expression;
+    } while (test_expression);
+    Note: Notice the semi – colon(“;”) in the end of loop.
+    
+    // C++ program to illustrate do-while loop
+    #include <iostream>
+    using namespace std;
+     
+    int main()
+    {
+        int i = 2; // Initialization expression
+     
+        do
+        {
+            // loop body
+            cout << "Hello World\n";
+     
+            // update expression
+            i++;
+     
+        }  while (i < 1);   // test expression
+     
+        return 0;
+    }
+    Run on IDE
+    Output:
+    
+    Hello World
+    In the above program the test condition (i<1) evaluates to false. But still as the loop is exit – controlled the loop body will execute once.
+    </pre>
+</div>
+
+<div class="red">
+    <pre><strong>Operators in C / C++</strong> 
+        Operators are the foundation of any programming language. Thus the functionality of C/C++ programming language is incomplete without the use of operators. 
+        We can define operators as symbols that helps us to perform specific mathematical and logical computations on operands. In other words we can say that an 
+        operator operates the operands.
+        For example, consider the below statement:
+        
+        c = a + b;
+        Here, ‘+’ is the operator known as addition operator and ‘a’ and ‘b’ are operands. The addition operator tells the compiler to add both of the operands ‘a’ 
+        and ‘b’. C/C++ has many built-in operator types and they can be classified as:
+        
+        Arithmetic Operators: These are the operators used to perform arithmetic/mathematical operations on operands. Examples: (+, -, *, /, %,++,–).
+        Arithmetic operator are of two types:
+        Unary Operators: Operators that operates or works with a single operand are unary operators.
+        For example: (++ , –)
+        Binary Operators: Operators that operates or works with two operands are binary operators.For example: (+ , – , * , /)
+        To learn Arithmetic Operators in details visit this link.
+        
+        Relational Operators: Relational operators are used for comparison of the values of two operands. For example: checking if one operand is equal to the other 
+        operand or not, an operand is greater than the other operand or not etc. Some of the relational operators are (==, > , = , <= ). To learn about each of these 
+        operators in details go to this link.
+        Logical Operators:  Logical Operators are used to combine two or more conditions/constraints or to complement the evaluation of the original condition in 
+        consideration. The result of the operation of a logical operator is a boolean value either true or false. To learn about different logical operators in 
+        details please visit this link.
+        Bitwise Operators: The Bitwise operators is used to perform bit-level operations on the operands. The operators are first converted to bit-level and then c
+        alculation is performed on the operands. The mathematical operations such as addition , subtraction , multiplication etc. can be performed at bit-level for faster 
+        processing. To learn bitwise operators in details, visit this link.
+        Assignment Operators: Assignment operators are used to assign value to a variable. The left side operand of the assignment operator is a variable and right side 
+        operand of the assignment operator is a value. The value on the right side must be of the same data-type of variable on the left side otherwise the compiler will 
+        raise an error.
+        Different types of assignment operators are shown below:
+        “=”: This is the simplest assignment operator. This operator is used to assign the value on the right to the variable on the left.
+        For example:
+        
+        
+         
+        
+        a = 10;
+        b = 20;
+        ch = 'y';
+        “+=”:This operator is combination of ‘+’ and ‘=’ operators. This operator first adds the current value of the variable on left to the value on right and then 
+        assigns the result to the variable on the left.
+        Example:
+        (a += b) can be written as (a = a + b)
+        If initially value stored in a is 5. Then (a += 6) = 11.
+        
+        “-=”:This operator is combination of ‘-‘ and ‘=’ operators. This operator first subtracts the current value of the variable on left from the value on right 
+        and then assigns the result to the variable on the left.
+        Example:
+        (a -= b) can be written as (a = a - b)
+        If initially value stored in a is 8. Then (a -= 6) = 2.
+        
+        “*=”:This operator is combination of ‘*’ and ‘=’ operators. This operator first multiplies the current value of the variable on left to the value on right 
+        and then assigns the result to the variable on the left.
+        Example:
+        (a *= b) can be written as (a = a * b)
+        If initially value stored in a is 5. Then (a *= 6) = 30.
+        
+        “/=”:This operator is combination of ‘/’ and ‘=’ operators. This operator first divides the current value of the variable on left by the value on right 
+        and then assigns the result to the variable on the left.
+        Example:
+        (a /= b) can be written as (a = a / b)
+        If initially value stored in a is 6. Then (a /= 2) = 3.
+        
+        Other Operators: Apart from the above operators there are some other operators available in C or C++ used to perform some specific task. Some of them are 
+        discussed here:
+        sizeof operator: sizeof is a much used in the C/C++ programming language. It is a compile time unary operator which can be used to compute the size of 
+        its operand. The result of sizeof is of unsigned integral type which is usually denoted by size_t. Basically, sizeof operator is used to compute the size 
+        of the variable. To learn about sizeof operator in details you may visit this link.
+        Comma Operator: The comma operator (represented by the token ,) is a binary operator that evaluates its first operand and discards the result, it then 
+        evaluates the second operand and returns this value (and type). The comma operator has the lowest precedence of any C operator. Comma acts as both operator 
+        and separator. To learn about comma in details visit this link.
+        Conditional Operator: Conditional operator is of the form Expression1 ? Expression2 : Expression3 . Here, Expression1 is the condition to be evaluated. 
+        If the condition(Expression1) is True then we will execute and return the result of Expression2 otherwise if the condition(Expression1) is false then we 
+        will execute and return the result of Expression3. We may replace the use of if..else statements by conditional operators. To learn about conditional 
+        operators in details, visit this link.
+        </pre>
+  </div>
+
+
+</body>
+</html>
+

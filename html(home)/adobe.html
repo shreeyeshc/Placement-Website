@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {font-family: Arial;
+        background-image: url("ppp.jpg");
+    }
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab{
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+div {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+}
+
+.red {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+
+.green {
+    background-color: #ddffdd;
+    border-left: 6px solid #4CAF50;
+}
+
+.blue {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+
+
+.yellow {
+    background-color: #ffffcc;
+    border-left: 6px solid #ffeb3b;
+}
+</style>
+</head>
+<body>
+
+        <h2>Placement Portal</h2>
+
+        <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Company</button>
+        <button class="tablinks" onclick="openCity(event, 'criteria')">Criteria</button>
+          <button class="tablinks" onclick="openCity(event, 'London')">Languages</button>
+          <button class="tablinks" onclick="openCity(event, 'inter')">Interview</button>
+          <button class="tablinks" onclick="openCity(event, 'subject')">Subject</button>
+            <button class="tablinks" onclick="openCity(event, 'top')">Top Topic</button>
+           <button class="tablinks" onclick="openCity(event, 'apt')">Aptitude</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Puzzle</button>
+           <button class="tablinks" onclick="openCity(event, 'abt')">About Us</button>
+        </div>
+
+<h2>Adobe</h2>
+<div class="red">
+  <pre><strong>Print this pattern!!</strong> 
+    Given an integer n, you need to print the following pattern pattern.
+
+    n=4
+          Output :
+           4444444
+           4333334
+           4322234
+           4321234
+           4322234
+           4333334
+           4444444
+    
+    n=3
+            Output :
+             33333
+             32223
+             32123
+             32223
+             33333
+    
+    
+    Input:
+    The first line of the input contains a single integer T, denoting the number of test cases. Then T test cases follow. Each test case contains one 
+    lines of input denoting the value of n.
+    
+    Output:
+    For each test case, Print the mentioned pattern.
+    
+    Constraints:
+    1<=T<=100
+    1<=N<=9
+    
+    Example:
+    
+    Input:
+    2
+    3
+    4
+    
+    Output:
+    33333
+    32223
+    32123
+    33333
+    4444444
+    4333334
+    4322234
+    4321234
+    4322234
+    4333334
+    4444444</pre>
+</div>
+
+<div class="green">
+  <pre><strong>Check if strings are rotations of each other or not</strong> 
+    Given strings s1 and s2, you need to find if s2 is a rotated version of the string s1. The strings are lowercase.
+
+    Input:
+    The first line of the input contains a single integer T, denoting the number of test cases. Then T test case follows. Each testcase contains 
+    two lines for s1 and s2.
+    
+    Output:
+    For each testcase, you need to print 1 if s2 is a rotated version of s1; else print 0.
+    
+    Constraints:
+    1<=T<=100
+    1<=|s1|,|s2|<=100
+    
+    Example:
+    
+    Input:
+    4
+    geeksforgeeks
+    forgeeksgeeks
+    mightandmagic
+    andmagicmigth
+    mushroomkingdom
+    itsamemario
+    geekofgeeks
+    geeksgeekof
+    
+    Output:
+    1
+    0
+    0
+    1
+    
+    Explanation:
+    For testcase 1: s1 is geeksforgeeks, s2 is forgeeksgeeks. Clearly, s2 is a rotated version of s1 as s2 can be obtained by 
+    left-rotating s1 by 5 units.</pre>
+</div>
+
+<div class="blue">
+  <pre><strong>Most frequent word in an array of strings</strong> 
+    Given an array containing N words, you need to find the most frequent word in the array. If multiple words have same frequency then print the word that comes 
+    first in lexicographical order.
+
+    Input:
+    The first line of the input contains a single integer T, denoting the number of test cases. Then T test case follows. Each test case contains 2 lines:-
+    The size of array N
+    N words separated by spaces
+    
+    Output:
+    For each testcase, print the most frequent word.
+    
+    Constraints:
+    1<=T<=100
+    1<=N<=1000
+    
+    Example:
+    
+    Input:
+    3
+    3
+    geeks for geeks
+    2
+    hello world
+    3
+    world wide fund
+    
+    Output:
+    geeks
+    hello
+    fund
+    
+    Explanation:
+    For testcase 1: geeks comes 2 times.
+    For testcase 2: hello and world both have 1 frequency. We print hello as it comes first in lexicographical order.</pre>
+</div>
+
+<div class="yellow">
+  <pre><strong>Product of maximum in first array and minimum in second</strong> 
+    Given two arrays of size N1 and N2 respectively, the task is to calculate the product of max element of first array 
+    and min element of second array.
+
+    Input:
+    The first line of the input contains a single integer T, denoting the number of test cases. Then T test case follows. 
+    Each testcase contains 4 lines:-
+    Size of the first array N1
+    Elements of the first array separated by spaces
+    Size of the second array N2
+    Elements of the second array separated by spaces
+    
+    Output:
+    For each testcase, print the product of the max element of the first array and the minimum element of the second array.
+    
+    Constraints:
+    1<=T<=107
+    1<=N1,N2<=1000
+    -1000<=A[i]<=1000
+    
+    Example:
+    
+    Input:
+    2
+    6
+    5 7 9 3 6 2
+    6
+    1 2 6 -1 0 9
+    6
+    1 4 2 3 10 2
+    6
+    4 2 6 5 2 9
+    
+    Output:
+    -9
+    20
+    
+    Explanation:
+    For testcase 1: The first array is 5 7 9 3 6 2. The max element among these elements is 9. The second array is 1 2 6 -1 0 9. 
+    The min element among these elements is -1. The product of 9 and -1 is 9*-1=-9.</pre>
+</div>
+
+<div class="red">
+    <pre><strong>Merge Sort for Linked List (Function Problem)</strong> 
+        Given Pointer/Reference to the head of a linked list, task is to Sort the given linked list using Merge Sort.
+
+        You need to complete the function splitList() and mergeList(), which will be called by the function mergeSort().
+        
+        void mergeSort(struct node** headRef)
+        {
+            struct node* head = *headRef;
+            struct node* a, b;
+            if ((head == NULL) || (head->next == NULL))
+               return NULL;
+            splitList(head, &a, &b); 
+            mergeSort(&a);
+            mergeSort(&b);
+            *headRef = mergeList(a, b);
+        }
+        The spliList() function takes three input, head of the linked list and references to two pointers that are initially null. The function changes these pointers so that will point to the two new splitted lists, left and right halves respectively. The function splits the linked list in to two halves just like in standard merge sort and store the two new head in pointer a and b respectively. As the name suggests function mergeList will merge two linked lists, as in standard merge sort and should head pointer to of the new merged list. 
+        
+        Note: If the length of linked list is odd, then the extra node should go in the first list while splitting.
+        
+        Input:
+        There will be multiple test cases, for each test case function mergeSort() will be called separately. The only input to the function is the pointer/reference to the head of the linked list.
+        
+        Output:
+        For each test, print the sorted linked list.
+        
+        Constraints:
+        1<=T<=100
+        1<=N<=105
+        
+        Example:
+        Input:
+        2
+        5
+        3 5 2 4 1
+        3
+        9 15 0
+        Ouput:
+        1 2 3 4 5
+        0 9 15</pre>
+  </div>
+  
+  <div class="green">
+    <pre><strong>Peak element (Function Problem)</strong> 
+        Given an array of integers. The task is to find a peak element in it. An array element is peak if it is not smaller than its neighbors. For corner elements, we need to consider only one neighbor. For example, for input array {5, 10, 20, 15}, 20 is the only peak element. For input array {10, 20, 15, 2, 23, 90, 67}, there are two peak elements: 20 and 90. 
+
+        Note: There may be multiple peak element possible, in that case you may return any valid index.
+        
+        Input:
+        The first line of input contains an integer T denoting the no of test cases. Then T test cases follow. Each test case contains an integer N. Then in the next line are N space separated values of the array.
+        
+        Output:
+        For each test case output will be 1 if the index returned by the function is an peak index.
+        
+        Constraints:
+        1<=T<=100
+        1<=N<=100
+        1<=A[]<=1000
+        
+        Example:
+        Input:
+        2
+        3
+        1 2 3
+        2
+        3 4
+        Output:
+        1
+        1</pre>
+  </div>
+
+</body>
+</html>
+

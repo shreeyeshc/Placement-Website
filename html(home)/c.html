@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+    body {font-family: Arial;
+        background-image: url("ppp.jpg");
+    }
+
+/* Style the tab */
+.tab {
+    overflow: hidden;
+    border: 1px solid #ccc;
+    background-color: #f1f1f1;
+}
+
+/* Style the buttons inside the tab */
+.tab button {
+    background-color: inherit;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+}
+
+/* Change background color of buttons on hover */
+.tab button:hover {
+    background-color: #ddd;
+}
+
+/* Create an active/current tablink class */
+.tab button.active {
+    background-color: #ccc;
+}
+
+/* Style the tab content */
+.tabcontent {
+    display: none;
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+}
+
+.tab{
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+div {
+    margin-bottom: 15px;
+    padding: 4px 12px;
+}
+
+.red {
+    background-color: #ffdddd;
+    border-left: 6px solid #f44336;
+}
+
+.green {
+    background-color: #ddffdd;
+    border-left: 6px solid #4CAF50;
+}
+
+.blue {
+    background-color: #e7f3fe;
+    border-left: 6px solid #2196F3;
+}
+
+
+.yellow {
+    background-color: #ffffcc;
+    border-left: 6px solid #ffeb3b;
+}
+</style>
+</head>
+<body>
+        <h2>Placement Portal</h2>
+
+        <div class="tab">
+        <button class="tablinks" onclick="openCity(event, 'Paris')">Company</button>
+        <button class="tablinks" onclick="openCity(event, 'criteria')">Criteria</button>
+          <button class="tablinks" onclick="openCity(event, 'London')">Languages</button>
+          <button class="tablinks" onclick="openCity(event, 'inter')">Interview</button>
+          <button class="tablinks" onclick="openCity(event, 'subject')">Subject</button>
+            <button class="tablinks" onclick="openCity(event, 'top')">Top Topic</button>
+           <button class="tablinks" onclick="openCity(event, 'apt')">Aptitude</button>
+        <button class="tablinks" onclick="openCity(event, 'Tokyo')">Puzzle</button>
+           <button class="tablinks" onclick="openCity(event, 'abt')">About Us</button>
+        </div>
+
+
+<h2>C Programming Language</h2>
+<div class="red">
+  <pre><strong>C Language Introduction</strong> 
+    C is a procedural programming language. It was initially developed by Dennis Ritchie between 1969 and 1973. It was mainly developed as a system programming 
+    language to write operating system. The main features of C language include low-level access to memory, simple set of keywords, and clean style, these 
+    features make C language suitable for system programming like operating system or compiler development.
+    Many later languages have borrowed syntax/features directly or indirectly from C language. Like syntax of Java, PHP, JavaScript and many other languages 
+    is mainly based on C language. C++ is nearly a superset of C language (There are few programs that may compile in C, but not in C++).</pre>
+</div>
+
+<div class="green">
+  <pre><strong>Functions in C/C++</strong> 
+    A function is a set of statements that take inputs, do some specific computation and produces output.
+
+    The idea is to put some commonly or repeatedly done task together and make a function, so that instead of writing the same code again and again for different
+    inputs, we can call the function.
+    
+     
+    Example: 
+    Below is a simple C program to demonstrate functions in C.
+    
+    #include <stdio.h>
+     
+    // An example function that takes two parameters 'x' and 'y'
+    // as input and returns max of two input numbers
+    int max(int x, int y)
+    {
+        if (x > y)
+          return x;
+        else
+          return y;
+    }
+     
+    // main function that doesn't receive any parameter and
+    // returns integer.
+    int main(void)
+    {
+        int a = 10, b = 20;
+     
+        // Calling above function to find max of 'a' and 'b'
+        int m = max(a, b);
+     
+        printf("m is %d", m);
+        return 0;
+    }
+    </pre>
+</div>
+
+<div class="blue">
+  <pre><strong>Variables and Keywords in C</strong> 
+    Keywords are specific reserved words in C each of which has a specific feature associated with it. Almost all of the words which help us use the 
+    functionality of the C language are included in the list of keywords. So you can imagine that the list of keywords is not going to be a small one!
+
+    There are a total of 32 keywords in C:
+    
+       auto       break    case     char     const     continue
+       default    do       double   else     enum      extern
+       float      for      goto     if       int       long
+       register   return   short    signed   sizeof    static
+       struct     switch   typedef  union    unsigned  void
+       volatile   while 
+    Most of these keywords have already been discussed in the various sub-sections of the C language, like Data Types, Storage Classes, Control 
+    Statements, Functions etc.</pre>
+</div>
+
+<div class="yellow">
+  <pre><strong>Data Types</strong> 
+    Each variable in C has an associated data type. Each data type requires different amounts of memory and has some specific operations which can be performed over it. Let us briefly describe them one by one:
+
+    Following are the examples of some very common data types used in C:
+    
+    char: The most basic data type in C. It stores a single character and requires a single byte of memory in almost all compilers.
+    int: As the name suggests, an int variable is used to store an integer.
+    float: It is used to store decimal numbers (numbers with floating point value) with single precision.
+    double: It is used to store decimal numbers (numbers with floating point value) with double precision.
+    
+    Different data types also have different ranges upto which they can store numbers. These ranges may vary from compiler to compiler. Below is list of ranges along with the memory requirement and format specifiers on 32 bit gcc compiler.
+    
+    Data Type             Memory (bytes)          Range                      Format Specifier
+    short int                   2          -32,768 to 32,767                       %hd
+    unsigned short int          2           0 to 65,535                            %hu
+    unsigned int                4           0 to 4,294,967,295                     %u
+    int                         4          -2,147,483,648 to 2,147,483,647         %d
+    long int                    4          -2,147,483,648 to 2,147,483,647         %ld
+    unsigned long int           4           0 to 4,294,967,295                     %lu
+    long long int               8          -(2^63) to (2^63)-1                     %lld
+    unsigned long long int      8           0 to 18,446,744,073,709,551,615        %llu
+    signed char                 1          -128 to 127                             %c 
+    unsigned char               1           0 to 255                               %c
+    float                       4                                                  %f
+    double                      8                                                  %lf
+    long double                 12                                                 %Lf
+    We can use the sizeof() operator to check the size of a variable. See the following C program for the usage of the various data types:
+    
+    
+    
+     #include <stdio.h>
+    int main()
+    {
+        int a = 1;
+        char b ='G';
+        double c = 3.14;
+        printf("Hello World!\n");
+     
+        //printing the variables defined above along with their sizes
+        printf("Hello! I am a character. My value is %c and "
+               "my size is %lu byte.\n", b,sizeof(char));
+        //can use sizeof(b) above as well
+     
+        printf("Hello! I am an integer. My value is %d and "
+               "my size is %lu  bytes.\n", a,sizeof(int));
+        //can use sizeof(a) above as well
+     
+        printf("Hello! I am a double floating point variable."
+               " My value is %lf and my size is %lu bytes.\n",c,sizeof(double));
+        //can use sizeof(c) above as well
+     
+        printf("Bye! See you soon. :)\n");
+     
+        return 0;
+    }
+    Run on IDE
+    Output:
+    
+    Hello World!
+    Hello! I am a character. My value is G and my size is 1 byte.
+    Hello! I am an integer. My value is 1 and my size is 4  bytes.
+    Hello! I am a double floating point variable. My value is 3.140000 and my size i
+    s 8 bytes.
+    Bye! See you soon. :)</pre>
+</div>
+
+<div class="red">
+    <pre><strong>Storage Classes</strong> 
+        Storage Classes are used to describe about the features of a variable/function. These features basically include the scope, 
+        visibility and life-time which help us to trace the existence of a particular variable during the runtime of a program.
+
+        C language uses 4 storage classes, namely:
+        
+        auto: This is the default storage class for all the variables declared inside a function or a block. Hence, the keyword auto 
+        is rarely used while writing programs in C language. Auto variables can be only accessed within the block/function they have 
+        been declared and not outside them (which defines their scope). Of course, these can be accessed within nested blocks within 
+        the parent block/function in which the auto variable was declared. However, they can be accessed outside their scope as well 
+        using the concept of pointers given here by pointing to the very exact memory location where the variables resides. They are 
+        assigned a garbage value by default whenever they are declared.
+        
+        extern: Extern storage class simply tells us that the variable is defined elsewhere and not within the same block where it is 
+        used. Basically, the value is assigned to it in a different block and this can be overwritten/changed in a different block as 
+        well. So an extern variable is nothing but a global variable initialized with a legal value where it is declared in order to 
+        be used elsewhere. It can be accessed within any function/block. Also, a normal global variable can be made extern as well by 
+        placing the ‘extern’ keyword before its declaration/definition in any function/block. This basically signifies that we are not 
+        initializing a new variable but instead we are using/accessing the global variable only. The main purpose of using extern 
+        variables is that they can be accessed between two different files which are part of a large program. For more information on 
+        how extern variables work, have a look at this link.
+        
+        static: This storage class is used to declare static variables which are popularly used while writing programs in C language. 
+        Static variables have a property of preserving their value even after they are out of their scope! Hence, static variables 
+        preserve the value of their last use in their scope. So we can say that they are initialized only once and exist till the 
+        termination of the program. Thus, no new memory is allocated because they are not re-declared. Their scope is local to the 
+        function to which they were defined. Global static variables can be accessed anywhere in the program. By default, they are 
+        assigned the value 0 by the compiler.
+        
+        register: This storage class declares register variables which have the same functionality as that of the auto variables. 
+        The only difference is that the compiler tries to store these variables in the register of the microprocessor if a free r
+        egister is available. This makes the use of register variables to be much faster than that of the variables stored in the 
+        memory during the runtime of the program. If a free register is not available, these are then stored in the memory only. 
+        Usually few variables which are to be accessed very frequently in a program are declared with the register keyword which 
+        improves the running time of the program. An important and interesting point to be noted here is that we cannot obtain the 
+        address of a register variable using pointers.</pre>
+  </div>
+  
+  <div class="green">
+    <pre><strong>Operators in C</strong> 
+        Operators are the foundation of any programming language. Thus the functionality of C language is incomplete without the use of operators. Operators allow us to perform different kinds of operations on operands. In C, operators in Can be categorized in following categories:
+
+        Arithmetic Operators (+, -, *, /, %, post-increment, pre-increment, post-decrement, pre-decrement)
+        Relational Operators (==, != , >, <, >= & <=) Logical Operators (&&, || and !)
+        Bitwise Operators (&, |, ^, ~, >> and <<)
+        Assignment Operators (=, +=, -=, *=, etc)
+        Other Operators (conditional, comma, sizeof, address, redirecton)
+        Arithmetic Operators: These are used to perform arithmetic/mathematical operations on operands. The binary operators falling in this category are:
+        
+        Addition: The ‘+’ operator adds two operands. For example, x+y.
+        Subtraction: The ‘-‘ operator subtracts two operands. For example, x-y.
+        Multiplication: The ‘*’ operator multiplies two operands. For example, x*y.
+        Division: The ‘/’ operator divides the first operand by the second. For example, x/y.
+        Modulus: The ‘%’ operator returns the remainder when first operand is divided by the second. For example, x%y.
+        // C program to demonstrate working of binary arithmetic operators
+        #include<stdio.h>
+         
+        int main()
+        {
+            int a = 10, b = 4, res;
+         
+            //printing a and b
+            printf("a is %d and b is %d\n", a, b);
+         
+            res = a+b; //addition
+            printf("a+b is %d\n", res);
+         
+            res = a-b; //subtraction
+            printf("a-b is %d\n", res);
+         
+            res = a*b; //multiplication
+            printf("a*b is %d\n", res);
+         
+            res = a/b; //division
+            printf("a/b is %d\n", res);
+         
+            res = a%b; //modulus
+            printf("a%%b is %d\n", res);
+         
+            return 0;
+        }
+        Run on IDE
+        Output:
+        
+        a is 10 and b is 4
+        a+b is 14
+        a-b is 6
+        a*b is 40
+        a/b is 2
+        a%b is 2</pre>
+  </div>
+  
+  <div class="blue">
+    <pre><strong>Strings </strong> 
+        Strings are defined as an array of characters. The difference between a character array and a string is the string is terminated with a special character ‘\0’.
+
+        Declaration of strings: Declaring a string is as simple as declaring a one dimensional array. Below is the basic syntax for declaring a string.
+        
+        char str_name[size];
+        In the above syntax str_name is any name given to the string variable and size is used define the length of the string, i.e the number of characters strings will store. Please keep in mind that there is an extra terminating character which is the Null character (‘\0’) used to indicate termination of string which differs strings from normal character arrays.
+        
+        Initializing a String: A string can be initialized in different ways. We will explain this with the help of an example. Below is an example to declare a string with name as str and initialize it with “GeeksforGeeks”.
+        
+        1. char str[] = "GeeksforGeeks";
+        
+        2. char str[50] = "GeeksforGeeks";
+        
+        3. char str[] = {'G','e','e','k','s','f','o','r','G','e','e','k','s','\0'};
+        
+        4. char str[14] = {'G','e','e','k','s','f','o','r','G','e','e','k','s','\0'};</pre>
+  </div>
+  
+  <div class="yellow">
+    <pre><strong>Warning!</strong> Some text...</pre>
+  </div>
+
+
+</body>
+</html>
+
